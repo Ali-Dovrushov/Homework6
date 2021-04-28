@@ -43,8 +43,8 @@ namespace Question4
 
         static void Main(string[] args)
         {
-            bool salamos1 = true;
             bool selection = true;
+            bool checkerRecursion1 = true;
             bool selectionForSwitch = false;
             do
             {
@@ -63,18 +63,18 @@ namespace Question4
                     if (firstNumber > seconNumber)
                     {
                         Console.WriteLine("\nFirst number can not be bigger than second\nPlese enter correct diapozon\n");
-                        salamos1 = false;
+                        checkerRecursion1 = false;
                     }
 
                     else
                     {
-                        salamos1 = true;
+                        checkerRecursion1 = true;
                     }
 
                     summ = DiapozonSumm(firstNumber, seconNumber);
 
                 }
-                while (salamos1 == false);
+                while (checkerRecursion1 == false);
 
                 Console.WriteLine($"Diapozon summ = {summ - seconNumber}");
                 Console.Write("\nWould you try again ? (Y/y) or (N/n): ");
