@@ -19,15 +19,15 @@ namespace Question1
 
         static int NumberChecker()
         {
-            int numberAndPow;
+            int number;
 
             for (; ; )
             {
                 string numberJust = Console.ReadLine();
 
-                if (Int32.TryParse(numberJust, out numberAndPow))
+                if (Int32.TryParse(numberJust, out number))
                 {
-                    return numberAndPow;
+                    return number;
                 }
 
                 else
