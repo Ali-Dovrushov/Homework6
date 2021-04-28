@@ -23,9 +23,9 @@ namespace Question1
 
             for (; ; )
             {
-                string numberJust = Console.ReadLine();
+                string numberInString = Console.ReadLine();
 
-                if (Int32.TryParse(numberJust, out number))
+                if (Int32.TryParse(numberInString, out number))
                 {
                     return number;
                 }
