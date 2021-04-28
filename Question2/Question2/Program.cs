@@ -4,31 +4,31 @@ namespace Question2
 {
     class Program
     {
-        static int Recursion(int a, int b)
+        static int Recursion(int firstNumber, int secondNumber)
         {
-            if (a == b)
+            if (firstNumber == secondNumber)
             {
-                return a;
+                return firstNumber;
             }
 
-            else if (a > b)
+            else if (firstNumber > secondNumber)
             {
-                return Recursion(a - b, b);
+                return Recursion(firstNumber - secondNumber, secondNumber);
             }
 
-            else if (a < 0)
+            else if (firstNumber < 0)
             {
-                return a * -1;
+                return firstNumber * -1;
             }
 
-            else if (b < 0)
+            else if (secondNumber < 0)
             {
-                return b * -1;
+                return secondNumber * -1;
             }
 
             else
             {
-                return Recursion(a, b - a);
+                return Recursion(firstNumber, secondNumber - firstNumber);
             }
         }
 
