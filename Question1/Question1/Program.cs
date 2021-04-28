@@ -17,7 +17,7 @@ namespace Question1
             return number;
         }
 
-        static int numberChecker()
+        static int NumberChecker()
         {
             int numberAndPow;
 
@@ -44,9 +44,9 @@ namespace Question1
             do
             {
                 Console.Write("Enter number: ");
-                int number = numberChecker();
+                int number = NumberChecker();
                 Console.Write("Enter power: ");
-                int pow = numberChecker();
+                int pow = NumberChecker();
                 Console.WriteLine($"Result: {Pow(number, pow)}");
 
                 Console.Write("\nWould you try again ? (Y/y) or (N/n): ");
