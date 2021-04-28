@@ -5,16 +5,18 @@ namespace Question1
     class Program
     {
 
-        static int Pow(int num, int pow)
+        static int PowForSum(int num, int pow)
         {
-            if (pow == 0)
+            //Отчет начинается по  условию со 2 степени.
+            if (pow == 2)
             {
-                return 1;
+                return num *= num;
             }
 
-            int number = num * Pow(num, pow - 1);
-
-            return number;
+            else
+            {
+                return num * num + (num * PowForSum(num, --pow));
+            }
         }
 
         static int NumberChecker()
@@ -47,7 +49,7 @@ namespace Question1
                 int number = NumberChecker();
                 Console.Write("Enter power: ");
                 int pow = NumberChecker();
-                Console.WriteLine($"Result: {Pow(number, pow)}");
+                Console.WriteLine($"Result summ pow: {PowForSum(number, pow)}");
 
                 Console.Write("\nWould you try again ? (Y/y) or (N/n): ");
                 do
