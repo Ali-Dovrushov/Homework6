@@ -1,19 +1,19 @@
 ﻿using System;
 
-namespace Question6
+namespace luckyNumberuestion6
 {
     class Program
     {
 
-        public static int[] a = new int[4];
-        public static int[] q = new int[4];
+        public static int[] myNumber = new int[4];
+        public static int[] luckyNumber = new int[4];
 
         public static void MyRandom()
         {
             Random rand = new Random();
             for (int i = 0; i < 4; ++i)
             {
-                q[i] = rand.Next(0,9) % 10;
+                luckyNumber[i] = rand.Next(0,9) % 10;
             }
         }
 
@@ -28,7 +28,7 @@ namespace Question6
 
             if (Checker(num))
             {
-                Console.Write($"Congratulation, {num} it's a lucky number, number attempts = {n}");
+                Console.Write($"\nCongratulation, {num} it's a lucky number, number attempts = {n}");
 
             }
             else
@@ -48,7 +48,7 @@ namespace Question6
         {
             for (int i = 3; i >= 0; --i)
             {
-                a[i] = num % 10;
+                myNumber[i] = num % 10;
                 num /= 10;
             }
 
@@ -58,7 +58,7 @@ namespace Question6
 
             for (int i = 0; i < 4; ++i)
             {
-                if (q[i] == a[i])
+                if (luckyNumber[i] == myNumber[i])
                 {
                     ++bulls;
                     c_check[i] = true;
@@ -73,7 +73,7 @@ namespace Question6
                     {
                         continue;
                     }
-                    if (a[i] == q[j])
+                    if (myNumber[i] == luckyNumber[j])
                     {
                         ++cows;
                         c_check[j] = true;
